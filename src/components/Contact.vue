@@ -35,6 +35,7 @@
           />
           <div class="error">{{ errors.first('phone') }}</div>
           <button
+              class="btn_color"
               v-if="index > 0"
               @click="removePhone(index)"
           >-
@@ -62,7 +63,7 @@
             :key="index"
         >{{ phone.value }}
         </div>
-        <button @click="removeUser(index)">remove user</button>
+        <button class="btn_color" @click="removeUser(index)">remove user</button>
       </div>
     </div>
   </div>
@@ -184,7 +185,9 @@ button {
   border-radius: 2px;
   margin-right: 5px;
 }
-
+.btn_color{
+  background: red;
+}
 .error {
   font-size: 12px;
   margin-top: 5px;
